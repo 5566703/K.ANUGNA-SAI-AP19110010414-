@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+void main()
+{  int number;
+ 
+    int i,  num, search = 0;
+ 
+    printf("Enter the number of elements ");
+    scanf("%d", &number);
+    int array[number];
+    printf("Enter the elements one by one \n");
+    for (i = 0; i < number; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+ 
+    printf("Enter the element to be searched ");
+    scanf("%d", &num);
+    /*  Linear search begins */
+    for (i = 0; i < number ; i++)
+    {
+        if (num == array[i] )
+        {
+            search = 1;
+            break;
+        }
+    }
+    if (search == 1)
+        printf("Element is present in the array at position %d",i+1);
+    else
+        printf("Element is not present in the array\n");
+}
